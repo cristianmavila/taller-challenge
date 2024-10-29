@@ -1,13 +1,6 @@
-const getData = async () => {
-  const data = await fetch("api/payments");
-  return data;
-};
-
 export default async function Home() {
-  const data = await getData();
-
-  console.log(data);
-
+  const response = await fetch("http://127.0.0.1:3000/api/payments");
+  console.log(response);
   return (
     <div className="mx-auto my-8 max-w-2xl">
       <h1>Taller challenge</h1>
